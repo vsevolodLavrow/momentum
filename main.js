@@ -62,7 +62,7 @@ function setBgGreet() {
         hour = today.getHours();
 
     if (hour < 6) {
-        //nigth
+        //night
         document.body.style.backgroundImage = "url('/img/night/02.jpg')";
         greeting.textContent = 'Good Night';
 
@@ -84,7 +84,7 @@ function setBgGreet() {
         base = '/img/day/';
        
     
-    } else if (hour < 23) {
+    } else if (hour < 24) {
         //evening
         document.body.style.backgroundImage = "url('/img/evening/12.jpg')";
         greeting.textContent = 'Good Evening';
@@ -134,7 +134,6 @@ function setName(e) {
         if (e.which == 13 || e.keycode == 13) {
             localStorage.setItem('name', e.target.innerText);
             name.blur();
-           // if (name.textContent === '') getName();
         }
     } else {
         localStorage.setItem('name', e.target.innerText);
